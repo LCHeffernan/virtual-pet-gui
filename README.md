@@ -1,6 +1,6 @@
-Virtual Pet.
+# Virtual Pet.
 
-Description.
+## Description.
 This is my first JavaScript project, which I then created a GUI for using HTML and CSS. When I started creating the GUI I wanted it to be something that a young child (3-5 yrs old) could do by themselves. Therefore I ensured, that as well as any written messages, there were visuals there which could be easily interpreted.
 
 A virtual pet is created and needs to be kept alive with interactions from the user, namely by being fed and exercised. The main features are:
