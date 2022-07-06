@@ -71,7 +71,7 @@ function exerciseAnimation() {
     let direction = 'down';
     let counter = 0;
     clearInterval(id);
-    id = setInterval(frame, 5);
+    id = setInterval(frame);
     function frame() {
         if (counter === 11)  {
             clearInterval(id);
