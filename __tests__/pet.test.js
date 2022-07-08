@@ -30,10 +30,10 @@ describe('constructor', () => {
 
         expect(pet.fitness).toEqual(10);
     });
-
+    // Should have 4 spaces in from the line above as per the rest of the code:
     it('has children array initially with no elements', () => {
     const pet = new Pet('Fido');
-
+    // You can remove this blank line here and in the other functions below. Generally with simple tests like this you can arrange all the setup parts (creating the instance, calling the function to be tested) together, then put all your assertions at the end after a simple blank line to separate them
     expect(pet.children.length).toEqual(0);
     });
 });
@@ -93,7 +93,7 @@ describe('walk', () => {
   
       expect(pet.fitness).toEqual(8);
     });
-
+    // How do we know what the max value for fitness is, or any other value we are testing for? Would it be a good idea to store these values in variables in this file as it is in pet.js? Otherwise whenever a change is made to the main file, you would have to go through the test file and check every individual test to see if any have been missed.
     it('make sure fitness does not go above max fitness', () => {
       const pet = new Pet('fido');
   
@@ -105,7 +105,7 @@ describe('walk', () => {
 
     it('throws an error if the pet is not alive', () => {
         const pet = new Pet('Fido');
-  
+        // As above, we dont know what the max age of a pet is. if it was in a variable, we could do this programatically by using pet.age =+ 5
         pet.age = 35;
   
         expect(() => pet.walk()).toThrow('Your pet is no longer alive :(');
@@ -120,6 +120,7 @@ describe('feed', () => {
     });
 
     it('decreases hunger by 3', () => {
+        // These should all be indented to 4 spaces as described above
       const pet = new Pet('fido');
   
       pet.hunger = 9;
@@ -129,6 +130,7 @@ describe('feed', () => {
     });
 
    it('make sure hunger does not go below min hunger', () => {
+    // Indentation again as before
       const pet = new Pet('fido');
   
       pet.hunger = 1;
@@ -159,6 +161,9 @@ describe('checkUp', () => {
         const pet = new Pet('fido');
 
         pet.fitness = 3;
+
+        // Could the messages for the checkup method be put in variables? If they were to change, the names of the tests would become redundant and they would all need re-writing to make them right.
+        // Also, if the limits for things like hunger and fitness were in variables they could be used in the names of the tests as well as in the tests themselves (think about template literals for this). Makes things much more futureproof and maintainable
 
         expect(pet.checkUp()).toEqual('I need a walk');
     });
