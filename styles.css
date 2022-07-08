@@ -1,0 +1,219 @@
+html{
+    font-size: 16px;
+    
+}
+
+body{
+    background-color: #B376FF;
+    border-top: 2rem;
+    
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.layout{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 40rem 2rem;
+    grid-template-areas: 
+        "buttons petPicture stats"
+        "footer footer footer";
+}
+
+.buttonOuterContainer {
+    grid-area: buttons;
+}
+
+.button{ 
+    text-align: center;
+}
+
+.button p {
+    margin:0;
+}
+
+.button button, .petAvatar{
+    box-shadow: 0 9px #666;
+}
+
+.button button:hover {
+    cursor: url("./images/animal-paw-print.png"), pointer;
+}
+
+.interactiveButton:active, .petAvatar:active {
+    box-shadow: 0 5px black;
+    transform: translateY(4px);
+}
+
+#growButton > button {
+    background-image: url('./images/petBirthday.jpg'); 
+    background-size: cover;
+ }
+
+ #feedButton > button {
+    background-image: url('./images/petEat.jpg'); 
+    background-size: cover;
+ }
+
+ #walkButton > button {
+    background-image: url('./images/petExercise.jpg'); 
+    background-size: cover;
+ }
+
+.mainOuterContainer {
+    grid-area: petPicture;
+    position:relative;
+    text-align: center;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainOuterContainer div div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mainContainer div button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#createPet, #petMessage {
+    width: auto;
+    height: 3rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #FF8D08;
+    border-color: black;
+    border-style: solid;
+    border-radius: 2rem;
+    border-width: 0.3rem;
+    font-size: 1.5rem;
+}
+
+#createPet {
+    visibility: hidden;
+}
+
+#petMessage {
+    margin-top: 0;
+}
+
+.petPicture {
+    position: relative;
+    padding-top:20px;
+    height:300px;
+}
+
+.petAvatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 2rem;
+}
+
+#dogAvatar {
+    background-image: url('./images/virtualPet.jpg'); 
+    background-size: cover;
+}
+
+#dinosaurAvatar {
+    background-image: url('./images/dinosaur.jpg'); 
+    background-size: cover;
+}
+
+#unicornAvatar {
+    background-image: url('./images/unicornIceLolly.jpg'); 
+    background-size: cover;
+}
+
+.avatarContainer {
+    position:relative;
+    height:300px;
+    top:-80px;
+}
+
+#petAlive {
+    width: 300px;
+    position: absolute;
+    left:-150px;
+    right:0;
+}
+
+.feedPetVisualContainer {
+    position: absolute;
+    top:80px;
+    left:-100px;
+}
+
+.feedPetVisual {
+    position: relative;
+}
+
+#pizzaSlice {
+    width: 80px;
+    position: absolute;
+    visibility: hidden;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.statOuterContainer {
+    grid-area: stats;
+}
+
+.stats {
+    text-align: center;
+}
+
+.stats p {
+    margin:0;
+}
+
+#growUp {
+    font-size: 50px;
+    text-align: center;
+}
+
+#ageStat button {
+    background-image: url('./images/birthdayBackground.jpg'); 
+    background-size: cover;
+}
+
+#hungerStat button{
+    background-color: #66FEFF;
+}
+
+#fitnessStat button {
+    background-color: #7DD4FF;
+}
+
+button {
+    text-decoration: none;
+    color: black;
+    border-color: black;
+}
+
+.interactiveButton, .fakeButton {
+    padding: 1rem;
+    margin: 1rem;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.footer div {
+    text-align: center;
+}
